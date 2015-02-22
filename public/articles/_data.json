@@ -1,6 +1,7 @@
 {
-  "rust-hermann-grid": {
-    "title": "Hermann Grid in Rust",
-    "date": "2015-02-21"
-  }
+    "rust-hermann-grid": {
+        "title": "Hermann Grid in Rust",
+        "description": "Introduction article on how to build a Hermann Grid in Rust.",
+        "date": "2015-02-21"
+    }
 }

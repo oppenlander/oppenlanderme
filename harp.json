@@ -1,11 +1,12 @@
 {
   "globals": {
-    "title": "Oppen Source",
+    "title": "Andrew Oppenlander",
     "description": "A personal site.",
     "name": "Andrew Oppenlander",
     "email": "andrew@oppenlander.me",
     "uri": "oppenlander.me",
-
+    "url": "http://oppenlander.me",
+      
     "typekit": false,
     "analytics": "UA-39242259-2",
     "disqus": "oppenlander"

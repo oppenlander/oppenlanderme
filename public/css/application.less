@@ -117,6 +117,10 @@ ul, ol, li {
   list-style: none;
 }
 
+.post-meta-item.description {
+  font-weight: 400;
+}
+
 .post-list {
   margin-bottom: 1.5em;
 }
@@ -135,6 +139,7 @@ ul, ol, li {
 
 .post-meta-item {
   display: inline-block;
+  font-weight: 600;
   margin-left: 0.75em;
   &:first-child {
     margin-left: 0;
@@ -252,7 +257,7 @@ ul, ol, li {
   line-height: 1;
   font-weight: 800;
   font-size: 2.5rem;
-  @media (min-width: @screen-medium) {
+  @media (min-width: @screen-small) {
     font-size: 3rem;
   }
   @media (min-width: 29em) {
@@ -267,6 +272,28 @@ ul, ol, li {
   @media (min-width: @screen-medium) {
     margin-top: 0.33em;
     font-size: 6.25rem;
+  }
+}
+
+.opening-description {
+  margin-top: 0.5em;
+  line-height: 1;
+  font-weight: 500;
+  font-size: 1.25rem;
+  @media (min-width: @screen-small) {
+    font-size: 1.5rem;
+  }
+  @media (min-width: 29em) {
+    font-size: 1.75rem;
+  }
+  @media (min-width: 35em) {
+    font-size: 2rem;
+  }
+  @media (min-width: 39em) {
+    font-size: 2.25rem;
+  }
+  @media (min-width: @screen-medium) {
+    font-size: 2.5rem;
   }
 }
 

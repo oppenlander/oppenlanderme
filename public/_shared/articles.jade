@@ -30,6 +30,9 @@ ul.post-list
           if disqus && article.disqus !== false
             li.post-meta-item
               a.post-comment-link(href="/articles/#{ article.slug }#disqus_thread") Comments
+        if article.description
+          ul.post-meta-list
+            li.post-meta-item.description= article.description
 
 //- If there are less posts than the postlimit,
     show a link to wherever all of them
