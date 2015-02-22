@@ -11,7 +11,7 @@ First step, is to ensure you have a recent version of Rust set up. Most librarie
 
 ## Generating a project
 Use Cargo to create a new bin project.
-```shell
+```bash
 $ cargo new hermann
 ```
 

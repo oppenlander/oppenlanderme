@@ -78,7 +78,7 @@ ul, ol, li {
 
 .container {
   max-width: 28em;
-  margin: 0 auto 4em auto;
+  margin: 0 auto 2em auto;
   padding: 0 1.6em;
   transition: max-width 0.5s;
   img {
@@ -147,7 +147,7 @@ ul, ol, li {
   @media (min-width: @screen-medium) {
     width: 10rem;
     margin-left: -10rem;
-    padding-right: 1em;
+    padding-right: .5em;
     margin-top: 0.15em;
     float: left;
     text-align: right;
@@ -403,9 +403,8 @@ code {
 /* Comments */
 
 .comments {
-  padding-top: 4em;
-  padding-bottom: 4em;
-  margin-top: 8em;
+  padding-top: 2em;
+  padding-bottom: 2em;
   background: @color-gray;
 }
 
@@ -422,7 +421,7 @@ code {
   &:extend(.container);
   font-size: 0.8em;
   margin-bottom: 0;
-  margin-top: 4em;
+  margin-top: 2em;
   text-align: center;
   color: @color-text-lighter;
   a, &:visited {
@@ -446,6 +445,13 @@ code {
   .container {
     margin-top: 0em;
     margin-bottom: 0em;
+    padding-left: .5em;
+    padding-right: .5em;
+
+    @media (min-width: @screen-medium) {
+      padding-left: 1.6em;
+      padding-right: 1.6em;
+    }
 
     a, a:visited {
       color: @color-text;
@@ -499,4 +505,23 @@ code {
 
 .right {
   float: right;
+}
+
+.index-header {
+  img {
+    width: 33%;
+    margin-top: 1em;
+    margin-right: .5em;
+    border-radius: 1em;
+    display: inline;
+    float: left;
+  }
+  @media (min-width: @screen-medium) {
+    img {
+      margin-left: -5.5em;
+      width: 5em;
+      display: inline;
+      float: left;
+    }
+  }
 }
