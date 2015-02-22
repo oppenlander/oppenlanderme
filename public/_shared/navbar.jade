@@ -1,18 +1,20 @@
 - var hasImage = false
-if public.images._contents
-  for image in public.images._contents
-    if image === current.path[1] + (".jpg" || ".png" || ".svg" || ".gif")
-      - hasImage = true
+for image in public.images._contents
+  if image === current.path[1] + (".jpg" || ".png" || ".svg" || ".gif" || ".jpeg")
+    - hasImage = true
 
-.navbar(role="banner")
-  div(class=hasImage ? 'shadow' : '').container
+.navbar(role="banner" class=hasImage ? 'shadow' : '')
+  .container
     .left.logo
       a(href="/") Andrew Oppenlander
-    ul.right(role="navigation")
-      li: a(href="/feed.xml" title="Feed"): i.fa.fa-rss
-      li: a(href="https://github.com/oppenlander" title="GitHub"): i.fa.fa-github-alt
-      li: a(href="https://twitter.com/andrewope" title="Twitter"): i.fa.fa-twitter
-      li: a(href="https://plus.google.com/+AndrewOppenlander" title="Google+"): i.fa.fa-google-plus
-      li: a(href="https://facebook.com/andrew.oppenlander" title="Facebook"): i.fa.fa-facebook
-      li: a(href="https://linkedin.com/in/andrewoppenlander/en" title="LinkedIn"): i.fa.fa-linkedin
-      li: a(href="https://www.dropbox.com/s/mjskgj3909lwfjb/resume.pdf?dl=0" title="Resume"): i.fa.fa-graduation-cap
+    #nav(role="navigation")
+      a(href="#nav" title="Show links").right.fa.fa-bars
+      a(href="#" title="Hide links").right.fa.fa-bars.active
+      ul.right
+        li: a(href="/feed.xml" title="Feed"): i.fa.fa-rss
+        li: a(href="https://github.com/oppenlander" title="GitHub"): i.fa.fa-github-alt
+        li: a(href="https://twitter.com/andrewope" title="Twitter"): i.fa.fa-twitter
+        li: a(href="https://plus.google.com/+AndrewOppenlander" title="Google+"): i.fa.fa-google-plus
+        li: a(href="https://facebook.com/andrew.oppenlander" title="Facebook"): i.fa.fa-facebook
+        li: a(href="https://linkedin.com/in/andrewoppenlander/en" title="LinkedIn"): i.fa.fa-linkedin
+        li: a(href="https://www.dropbox.com/s/mjskgj3909lwfjb/resume.pdf?dl=0" title="Resume"): i.fa.fa-graduation-cap

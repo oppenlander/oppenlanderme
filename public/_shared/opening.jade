@@ -1,8 +1,7 @@
 .opening(class="#{ published === false ? 'post-unpublished' : '' }")
-  if public.images._contents
-    for image in public.images._contents
-      if image === current.path[1] + (".jpg" || ".png" || ".svg" || ".gif")
-        img.opening-image(src="/images/#{ image }", alt="")
+  for image in public.images._contents
+    if image === current.path[1] + (".jpg" || ".png" || ".svg" || ".gif" || ".jpeg")
+      img.opening-image(src="/images/#{ image }", alt="")
   header.opening-header
     .container
       if title
