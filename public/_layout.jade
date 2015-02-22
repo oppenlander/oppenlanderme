@@ -11,6 +11,7 @@ html(lang="en")
     else
       //- Otherwise, use Harp’s partial() function to wrap it in that directory’s _nest.jade
       != partial((current.path[current.path.length - 2] || '') + "/_nest")
+    != partial("_shared/navbar")
     != partial("_shared/footer")
   if disqus
     != partial("_shared/comment-count")

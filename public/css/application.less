@@ -85,14 +85,14 @@ ul, ol, li {
     width: 100%;
   }
   @media (min-width: @screen-medium) {
-    max-width: 33em;
+    max-width: 38em;
   }
 }
 
 .container--articles {
-  margin-top: 2em;
+  margin-top: 3em;
   @media (min-width: @screen-medium) {
-    padding-left: 10rem;
+    padding-left: 7rem;
   }
 }
 
@@ -118,15 +118,15 @@ ul, ol, li {
 }
 
 .post-list {
-  margin-bottom: 3em;
+  margin-bottom: 1.5em;
 }
 
 .post-item {
-  margin-bottom: 3em;
+  margin-bottom: 1.5em;
 }
 
 .post-item-title {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .post-item-title {
@@ -212,7 +212,7 @@ ul, ol, li {
     max-height: 27rem;
   }
   .container {
-    margin-top: 2em;
+    margin-top: 3em;
   }
   & + .container {
     > p:first-of-type {
@@ -265,7 +265,7 @@ ul, ol, li {
     font-size: 5.25rem;
   }
   @media (min-width: @screen-medium) {
-    margin-top: 0.25em;
+    margin-top: 0.33em;
     font-size: 6.25rem;
   }
 }
@@ -420,10 +420,10 @@ code {
 
 .footer {
   &:extend(.container);
-  &:extend(.container--articles);
   font-size: 0.8em;
   margin-bottom: 0;
   margin-top: 4em;
+  text-align: center;
   color: @color-text-lighter;
   a, &:visited {
     color: @color-text-light;
@@ -431,4 +431,72 @@ code {
       color: @color-text;
     }
   }
+}
+
+/* Navbar */
+
+.navbar {
+  padding-top: .33em;
+  padding-bottom: .33em;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  font-size: 1.50rem;
+
+  .container {
+    margin-top: 0em;
+    margin-bottom: 0em;
+
+    a, a:visited {
+      color: @color-text;
+    }
+
+    .logo {
+      font-weight: 600;
+    }
+
+    a:hover {
+      -moz-transition: color 500ms; /* Firefox 4 */
+      -o-transition: color 500ms; /* Opera     */
+      -webkit-transition: color 500ms; /* Chrome    */
+      transition: color 500ms;
+      color: @color-link-hover;
+    }
+  }
+
+  .container.shadow {
+    text-shadow: 0 0 .75em rgba(0, 0, 0, 0.8);
+
+    a, a:visited {
+      color: @color-header;
+    }
+
+    a:hover {
+      -moz-transition: text-shadow 500ms; /* Firefox 4 */
+      -o-transition: text-shadow 500ms; /* Opera     */
+      -webkit-transition: text-shadow 500ms; /* Chrome    */
+      transition: text-shadow 500ms;
+      text-shadow: 0 0 .5em rgba(90, 148, 174, 0.6);
+    }
+  }
+
+  ul {
+    list-style: none;
+    li {
+      float: left;
+    }
+  }
+
+  .fa {
+    margin-right: .2em;
+    margin-left: .2em;
+  }
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
 }
