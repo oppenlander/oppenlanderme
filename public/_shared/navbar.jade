@@ -1,7 +1,8 @@
 - var hasImage = false
-for image in public.images._contents
-  if image === current.path[1] + (".jpg" || ".png" || ".svg" || ".gif")
-    - hasImage = true
+if public.images._contents
+  for image in public.images._contents
+    if image === current.path[1] + (".jpg" || ".png" || ".svg" || ".gif")
+      - hasImage = true
 
 .navbar(role="banner")
   div(class=hasImage ? 'shadow' : '').container
