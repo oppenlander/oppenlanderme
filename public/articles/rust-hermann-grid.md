@@ -1,9 +1,9 @@
-Happy inaugural post! Instead of just saying hi, why not jump into the project I worked on this morning, generating a Hermann Grid using Rust.
+Happy inaugural post! Instead of just saying hi, why not jump into the project I worked on this morning: generating a Hermann Grid using Rust.
 ![Hermann Grid](/images/resources/hermann/hermann.jpeg)
 
 A Hermann Grid is an optical illusion where dark patches between the corners of the squares you are not directly looking at. For more information, see [Michael Bach's excellent page on them](http://www.michaelbach.de/ot/lum_herGrid/index.html).
 
-I liked the idea of having this optical illusion as my cover photo on social websites, but didn't immediately find a simple way to generate one. So my options were to either fumble around in Inkskape until I made something passable, or build a little tool to generate one for me. Obviously I did the latter, so let's walk through the process.
+I liked the idea of having this optical illusion as my cover photo on social websites, but couldn't find a simple way to generate one. So instead of fumbling around in Inkskape until I made something passable, I built a little tool to generate one for me. So let's walk through the process.
 
 
 ## Installing Rust
@@ -42,11 +42,13 @@ fn gen() {
     let _ = ImageRgb8(imgbuf).save(fout, JPEG);
 }
 ```
-We create an `ImageBuffer` from a closure function, which returns an `Rgb` pixel, create a file specification, then save the image out with `ImageRgb8`.  
+We create an `ImageBuffer` from a closure function, which returns an `Rgb` pixel for each coordinate.
+Then we write the `ImageBuffer` out to a file using `ImageRgb8` and a `File`.  
 ![Herman 1](/images/resources/hermann/hermann-1.jpeg)
 
 ## Hermannize the image
-We can create a Hermann Grid using the pixel position. Let's first make one with squares 8 pixels wide and margins 2 pixels wide.
+We can create a Hermann Grid using the pixel coordinates; splitting those into boxes by taking the remainder of the coordinate with the size of the box.  
+Let's make one with squares 8 pixels wide and margins 2 pixels wide.
 ```rust
 fn gen() {
     let imgx = 150;
@@ -77,7 +79,6 @@ fn gen() {
 ![Herman 2](/images/resources/hermann/hermann-2.jpeg)
 
 ## Finishing up
-Hooray! We have a Hermann Gird with the proper illusion effect. To make this useful for a banner image, we need to increase the resolution. The current guidelines for twitter are for an image about 1500px by 500px.  
-It will also be useful to center the image, so we'll also add an offset to the pixels to keep the edges balanced.
+Hooray! We have a Hermann Gird with the proper illusion effect. To make this useful for a banner image, we need to increase the resolution. The current guidelines for twitter are for an image about 1500px by 500px.
 
-For a more complete version, check out [my GitHub repo](https://github.com/oppenlander/rust-hermann-generator). It contains some extra goodies, like the ability to invert the colors.
+For a more complete version, check out [my GitHub repo](https://github.com/oppenlander/rust-hermann-generator). It contains some extra goodies, like the ability to invert the colors and choose the size.
