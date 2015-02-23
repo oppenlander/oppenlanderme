@@ -1,7 +1,7 @@
 Happy inaugural post! Instead of just saying hi, why not jump into the project I worked on this morning: generating a Hermann Grid using Rust.
 ![Hermann Grid](/images/resources/hermann/hermann.jpeg)
 
-A Hermann Grid is an optical illusion where dark patches between the corners of the squares you are not directly looking at. For more information, see [Michael Bach's excellent page on them](http://www.michaelbach.de/ot/lum_herGrid/index.html).
+A Hermann Grid is an optical illusion where dark patches appear between the corners of the squares you are not directly looking at. For more information, see [Michael Bach's excellent page on them](http://www.michaelbach.de/ot/lum_herGrid/index.html).
 
 I liked the idea of having this optical illusion as my cover photo on social websites, but couldn't find a simple way to generate one. So instead of fumbling around in Inkskape until I made something passable, I built a little tool to generate one for me. So let's walk through the process.
 
@@ -16,7 +16,7 @@ $ cargo new hermann
 ```
 
 ## Install dependencies
-We're going to use Piston's image library to generate the image.  
+We're going to use Piston's image library to generate the image.
 To add it to the project, add it to your `Cargo.toml`.
 ```yaml
 [dependencies.image]
@@ -43,11 +43,11 @@ fn gen() {
 }
 ```
 We create an `ImageBuffer` from a closure function, which returns an `Rgb` pixel for each coordinate.
-Then we write the `ImageBuffer` out to a file using `ImageRgb8` and a `File`.  
+Then we write the `ImageBuffer` out to a file using `ImageRgb8` and a `File`.
 ![Herman 1](/images/resources/hermann/hermann-1.jpeg)
 
 ## Hermannize the image
-We can create a Hermann Grid using the pixel coordinates; splitting those into boxes by taking the remainder of the coordinate with the size of the box.  
+We can create a Hermann Grid using the pixel coordinates; splitting those into boxes by taking the remainder of the coordinate with the size of the box.
 Let's make one with squares 8 pixels wide and margins 2 pixels wide.
 ```rust
 fn gen() {
