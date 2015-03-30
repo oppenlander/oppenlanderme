@@ -79,7 +79,7 @@ ul, ol, li {
 .container {
   max-width: 28em;
   margin: 0 auto 2em auto;
-  padding: 0 1.6em;
+  padding: 0.25em 1.6em;
   transition: max-width 0.5s;
   img {
     width: 100%;
@@ -315,6 +315,22 @@ ul, ol, li {
   display: block;
   margin-top: 1em;
   margin-left: 0.25em;
+  font-size: 1.25rem;
+  @media (min-width: @screen-small) {
+    font-size: 1.5rem;
+  }
+  @media (min-width: 29em) {
+    font-size: 1.75rem;
+  }
+  @media (min-width: 35em) {
+    font-size: 2rem;
+  }
+  @media (min-width: 39em) {
+    font-size: 2.25rem;
+  }
+  @media (min-width: @screen-medium) {
+    font-size: 2.5rem;
+  }
 }
 
 .opening-return {
@@ -448,7 +464,7 @@ code {
   &:extend(.container);
   font-size: 0.8em;
   margin-bottom: 0;
-  margin-top: 2em;
+  margin-top: 1em;
   text-align: center;
   color: @color-text-lighter;
   a, &:visited {
