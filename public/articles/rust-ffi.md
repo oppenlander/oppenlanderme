@@ -91,6 +91,6 @@ I've implemented this boilerplate and example bindings for JavaScript/nodejs in 
 
 The decision to use [Yeoman](http://yeoman.io/) was simply because I haven't seen a better tool for bootstrapping project structures.
 
-This post and the generator was inspired by [Zbigniew Siciarz's blog post on calling Rust from other languages](http://localhost:9000/articles/embedded-rust).
+This post and the generator was inspired by [Zbigniew Siciarz's blog post on calling Rust from other languages](https://siciarz.net/24-days-of-rust-calling-rust-from-other-languages/).
 
 If you have any questions/suggestions feel free to comment, [open an issue](https://github.com/oppenlander/generator-rust-ffi/issues), or [make a pull request](https://github.com/oppenlander/generator-rust-ffi/pulls).
