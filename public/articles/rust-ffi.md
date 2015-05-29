@@ -101,7 +101,7 @@ println!("Hello {}!", str_name);
 Here we get into some unsafe code so we can extract bytes out of the CString's raw pointer. We then convert the bytes into a String, and print out our _very_ important message.
 
 # Calling Rust From Node
-I spend most of my time working in JavaScript/nodejs for my day job, so let's go over how we can call in to our Magnificent Rust Library.
+I spend most of my time working in JavaScript/nodejs, so let's go over how we can call in to our Magnificent Rust Library.
 
 ```js
 // mylib.js
