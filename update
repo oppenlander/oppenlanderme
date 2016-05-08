@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+# Build pages
+echo "Compiling html"
+harp compile
+
+
+# Renaming articles to also include no "html"
+echo "Fixing articles"
+pushd ./www/articles
+  for file in $(ls --ignore='index.html')
+  do
+    cp $file $(basename $file .html)
+  done
+popd
+
+# Sync with s3
+echo "Uploading base site to s3"
+aws s3 sync ./www s3://oppenlander.me --exclude 'articles/*'
+echo "Uploading articles to s3 wth forced content type"
+aws s3 sync ./www/articles s3://oppenlander.me/articles --delete --content-type 'text/html'
+
