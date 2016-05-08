@@ -1,6 +1,8 @@
 Happy inaugural post! Instead of just saying hi, why not jump into the project I worked on this morning: generating a Hermann Grid using Rust.
 ![Hermann Grid](/images/resources/hermann/hermann.jpeg)
 
+NOTE: This artical is out of date. The version of rust used in the examples is pre-1.0.
+
 A Hermann Grid is an optical illusion where dark patches appear between the corners of the squares you are not directly looking at. For more information, see [Michael Bach's excellent page on them](http://www.michaelbach.de/ot/lum_herGrid/index.html).
 
 I liked the idea of having this optical illusion as my cover photo on social websites, but couldn't find a simple way to generate one. So instead of fumbling around in Inkskape until I made something passable, I built a little tool to generate one for me. So let's walk through the process.
